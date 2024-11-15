@@ -80,6 +80,15 @@ public class KnapsackState {
     }
 
     /**
+     * Retorna o valor total dos itens selecionados no estado atual.
+     *
+     * @return O valor total dos itens selecionados.
+     */
+    public List<Item> getItemsSelected() {
+        return selectedItems;
+    }
+
+    /**
      * Calcula a heurística para o estado atual, que representa a diferença entre
      * a capacidade da mochila e o peso total dos itens selecionados.
      * A heurística é usada para priorizar estados que estão mais próximos
