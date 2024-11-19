@@ -5,6 +5,7 @@ public class Sistema {
     private Recurso recurso;
 
     public Sistema() {
+        iot = new IoT();
         recurso = new Recurso(0);
     }
 
@@ -39,7 +40,7 @@ public class Sistema {
     private void menuMelhoresProjetos() {
         Integer option;
         for(;;) {
-            System.out.printf("Valor da recurso atual: %.2f", recurso.getCapacity());
+            System.out.printf("Valor da recurso atual: %.2f\n", recurso.getCapacity());
             System.out.println("[1] - Apresentar melhores projetos");
             System.out.println("[2] - Alterar recurso Atual");
             System.out.println("[0] - Sair");
