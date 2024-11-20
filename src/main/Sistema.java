@@ -11,7 +11,7 @@ public class Sistema {
 
     public void iniciar() {
         Integer option;
-        for(;;) {
+        for (; ; ) {
             System.out.println("Sistema de Projetos/Recursos");
             System.out.println("[1] - Apresentar Melhores Projetos");
             System.out.println("[2] - Editar projeto");
@@ -20,18 +20,18 @@ public class Sistema {
             System.out.println("[0] - Sair");
             System.out.println("Informe a opção que deseja: ");
             option = iot.inputInteger();
-            if(option == 1) {
+            if (option == 1) {
                 menuMelhoresProjetos();
-            }else if(option == 2) {
+            } else if (option == 2) {
                 //Função menu Editar Projetos
-            }else if(option == 3) {
+            } else if (option == 3) {
                 //Função menu Adicionar Projetos
-            }else if(option == 4) {
+            } else if (option == 4) {
                 //Função menu Remover Projetos
-            }else if(option == 0) {
+            } else if (option == 0) {
                 System.out.println("Até mais!");
                 break;
-            }else {
+            } else {
                 System.out.println("Opção inválida!");
             }
         }
@@ -39,20 +39,20 @@ public class Sistema {
 
     private void menuMelhoresProjetos() {
         Integer option;
-        for(;;) {
+        for (; ; ) {
             System.out.printf("Valor da recurso atual: %.2f\n", recurso.getCapacity());
             System.out.println("[1] - Apresentar melhores projetos");
             System.out.println("[2] - Alterar recurso Atual");
             System.out.println("[0] - Sair");
             System.out.println("Informe a opção que deseja: ");
             option = iot.inputInteger();
-            if(option == 1) {
+            if (option == 1) {
                 //Função que apresenta os melhores projetos escolhidos
-            }else if(option == 2) {
-                //Função que muda a capacidade do Recurso
-            }else if(option == 0) {
+            } else if (option == 2) {
+                recurso.alterarCapacidade();
+            } else if (option == 0) {
                 break;
-            }else {
+            } else {
                 System.out.println("Opção inválida!");
             }
         }
