@@ -1,8 +1,11 @@
 package main;
 
+import java.util.Scanner;
+
 public class Sistema {
     private IoT iot;
     private Recurso recurso;
+    private Projeto projeto;
 
     public Sistema() {
         iot = new IoT();
@@ -25,7 +28,7 @@ public class Sistema {
             } else if (option == 2) {
                 //Função menu Editar Projetos
             } else if (option == 3) {
-                //Função menu Adicionar Projetos
+                adicionarProjetos();
             } else if (option == 4) {
                 //Função menu Remover Projetos
             } else if (option == 0) {
@@ -56,5 +59,28 @@ public class Sistema {
                 System.out.println("Opção inválida!");
             }
         }
+    }
+
+    private void adicionarProjetos() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite o nome do projeto: ");
+        String descricao = scanner.nextLine();
+
+        System.out.println("Digite o valor do projeto: ");
+        double valor = scanner.nextDouble();
+        if (valor <= 0) {
+            System.out.println("O valor deve ser maior que zero!");
+            return;
+        }
+
+        System.out.println("Digite o retorno do projeto: ");
+        double retorno = scanner.nextDouble();
+        if (retorno <= 0) {
+            System.out.println("O retorno deve ser maior que zero!");
+            return;
+        }
+
+        recurso.addItem(new Projeto("investimento melhor", 150.0,  950.0));
     }
 }
