@@ -12,16 +12,16 @@ public class KnapsackTest {
         int numberOfItems = 10000;
 
         // Gerar itens aleatórios com valores decimais
-        List<Item> items = generateRandomItems(numberOfItems, 5, 50.0, 0.5, 300.0);
+//        List<Item> items = generateRandomItems(numberOfItems, 5, 50.0, 0.5, 300.0);
 
 
-//        List<Item> items = new ArrayList<>();
-//        items.add(new Item(40.0, 100.0));
-//        items.add(new Item(5.0, 50.0));
-//        items.add(new Item(6.0, 190.0));
-//        items.add(new Item(2.0, 15.0));
-//        items.add(new Item(8.0, 55.0));
-//        items.add(new Item(4.5, 105.0));
+        List<Item> items = new ArrayList<>();
+        items.add(new Item(40.0, 100.0));
+        items.add(new Item(5.0, 50.0));
+        items.add(new Item(6.0, 190.0));
+        items.add(new Item(2.0, 15.0));
+        items.add(new Item(8.0, 55.0));
+        items.add(new Item(4.5, 105.0));
 
 
 
